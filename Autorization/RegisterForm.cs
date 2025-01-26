@@ -72,11 +72,11 @@ namespace Autorization
             }
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            var LoginValue = Login.Text;
-            var Password = Pass.Text;
-            var Validation = ValidPass.Text;
-            var HashedPass = "";
-            var HashedValidation = ".";
+            string LoginValue = Login.Text;
+            string Password = Pass.Text;
+            string Validation = ValidPass.Text;
+            string HashedPass = "";
+            string HashedValidation = ".";
             while (HashedPass != HashedValidation)
             {
                 if (Regex.IsMatch(LoginValue, @"\p{IsCyrillic}"))
@@ -180,6 +180,7 @@ namespace Autorization
             {
                 return false;
             }
+            
         }
         
         private void label2_Click(object sender, EventArgs e)
@@ -189,7 +190,7 @@ namespace Autorization
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -197,6 +198,18 @@ namespace Autorization
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+        }
+
+        private void Login_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 
