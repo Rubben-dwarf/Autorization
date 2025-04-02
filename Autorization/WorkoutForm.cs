@@ -26,10 +26,6 @@ namespace Autorization
             Application.Exit();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
         protected int fieldCount = 0;
         protected List<TextBox> textBoxes = new List<TextBox>();
         protected List<NumericUpDown> numerics = new List<NumericUpDown>();
@@ -109,5 +105,9 @@ namespace Autorization
             mainPage.Show();
         }
 
+        private void WorkoutName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

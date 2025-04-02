@@ -57,15 +57,21 @@
             // 
             // WorkoutName
             // 
+            this.WorkoutName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.WorkoutName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.WorkoutName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WorkoutName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.WorkoutName.Location = new System.Drawing.Point(38, 42);
             this.WorkoutName.Name = "WorkoutName";
-            this.WorkoutName.Size = new System.Drawing.Size(279, 20);
+            this.WorkoutName.Size = new System.Drawing.Size(279, 21);
             this.WorkoutName.TabIndex = 13;
             this.WorkoutName.Text = "Тренировка";
+            this.WorkoutName.TextChanged += new System.EventHandler(this.WorkoutName_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(35, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 13);
@@ -75,6 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(35, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
@@ -84,6 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Location = new System.Drawing.Point(35, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 13);
@@ -92,43 +100,57 @@
             // 
             // WorkoutDate
             // 
+            this.WorkoutDate.CalendarForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.WorkoutDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.WorkoutDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.WorkoutDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.WorkoutDate.Location = new System.Drawing.Point(38, 151);
             this.WorkoutDate.Name = "WorkoutDate";
             this.WorkoutDate.Size = new System.Drawing.Size(159, 20);
             this.WorkoutDate.TabIndex = 19;
-            this.WorkoutDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // WorkoutType
             // 
+            this.WorkoutType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.WorkoutType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WorkoutType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WorkoutType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.WorkoutType.FormattingEnabled = true;
             this.WorkoutType.Items.AddRange(new object[] {
             "Силовая",
             "Кардио"});
             this.WorkoutType.Location = new System.Drawing.Point(38, 96);
             this.WorkoutType.Name = "WorkoutType";
-            this.WorkoutType.Size = new System.Drawing.Size(279, 21);
+            this.WorkoutType.Size = new System.Drawing.Size(279, 23);
             this.WorkoutType.TabIndex = 20;
             // 
             // AddExercise
             // 
+            this.AddExercise.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.AddExercise.FlatAppearance.BorderSize = 0;
+            this.AddExercise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddExercise.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddExercise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.AddExercise.Location = new System.Drawing.Point(346, 42);
             this.AddExercise.Margin = new System.Windows.Forms.Padding(1);
             this.AddExercise.Name = "AddExercise";
             this.AddExercise.Size = new System.Drawing.Size(39, 38);
             this.AddExercise.TabIndex = 21;
             this.AddExercise.Text = "+";
-            this.AddExercise.UseVisualStyleBackColor = true;
+            this.AddExercise.UseVisualStyleBackColor = false;
             this.AddExercise.Click += new System.EventHandler(this.AddExercise_Click);
             // 
             // AddWorkoutContent
             // 
+            this.AddWorkoutContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.AddWorkoutContent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddWorkoutContent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.AddWorkoutContent.Location = new System.Drawing.Point(38, 480);
             this.AddWorkoutContent.Name = "AddWorkoutContent";
             this.AddWorkoutContent.Size = new System.Drawing.Size(172, 23);
             this.AddWorkoutContent.TabIndex = 22;
             this.AddWorkoutContent.Text = "Создать тренировку";
-            this.AddWorkoutContent.UseVisualStyleBackColor = true;
+            this.AddWorkoutContent.UseVisualStyleBackColor = false;
             this.AddWorkoutContent.Click += new System.EventHandler(this.AddWorkoutContent_Click);
             // 
             // Note
@@ -152,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(23)))));
             this.ClientSize = new System.Drawing.Size(999, 595);
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.Note);
