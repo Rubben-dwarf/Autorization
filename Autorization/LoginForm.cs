@@ -52,6 +52,7 @@ namespace Autorization
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
+            string why = string.Empty;
 
                 string login = Login.Text;
                 string pass = Pass.Text;
@@ -60,7 +61,6 @@ namespace Autorization
 
                 string queryString = $"SELECT Id, Login, Password FROM users WHERE Login = '{login}' AND Password = '{Hashed}'";
                 SqlCommand command = new SqlCommand(queryString, DataBase.getConnection());
-
                 adapter.SelectCommand = command;
                 adapter.Fill(table);
                 if (table.Rows.Count == 1)
@@ -69,12 +69,13 @@ namespace Autorization
                     Note.Text = "Вы Вошли!";
                     Login.Text = "";
                     Pass.Text = "";
-                    login = "";
                     pass = "";
                     Hashed = "";
                     MainPage main = new MainPage();
                     main.Show();
                     this.Hide();
+                    main.UserName.Text = login;
+                    login = "";
                 }
                 else
                 {
@@ -92,7 +93,12 @@ namespace Autorization
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void Pass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

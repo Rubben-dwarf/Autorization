@@ -86,6 +86,8 @@
             this.Pass.Name = "Pass";
             this.Pass.Size = new System.Drawing.Size(155, 20);
             this.Pass.TabIndex = 4;
+            this.Pass.UseSystemPasswordChar = true;
+            this.Pass.TextChanged += new System.EventHandler(this.Pass_TextChanged);
             // 
             // label2
             // 
@@ -121,7 +123,7 @@
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CloseButton.Location = new System.Drawing.Point(318, 1);
+            this.CloseButton.Location = new System.Drawing.Point(316, 3);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(28, 23);
             this.CloseButton.TabIndex = 11;

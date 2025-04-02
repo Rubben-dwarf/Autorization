@@ -39,6 +39,7 @@
             this.CloseButton = new System.Windows.Forms.Button();
             this.Note = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +59,7 @@
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(176, 20);
             this.Login.TabIndex = 1;
+            this.Login.TextChanged += new System.EventHandler(this.Login_TextChanged_1);
             // 
             // Pass
             // 
@@ -155,12 +157,23 @@
             this.linkLabel1.Text = "Войти";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(27, 156);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(356, 383);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.Note);
@@ -196,5 +209,6 @@
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Label Note;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button1;
     }
 }
